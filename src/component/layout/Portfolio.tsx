@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaArrowRight, FaGithub, FaExternalLinkAlt, FaTh, FaList } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaGithub,
+  FaExternalLinkAlt,
+  FaTh,
+  FaList,
+} from "react-icons/fa";
 import { HiOutlineCode } from "react-icons/hi";
 import { Link } from "react-router-dom"; // Use react-router-dom Link
 
@@ -24,7 +30,14 @@ const projects = [
       "Active Club is a full-stack sports club management web application that allows users to view and book courts, participate in activities, and stay informed through announcements. Admins can manage courts, bookings, users, and important updates all in one place.",
     live_link: "https://active-club-cb1de.web.app/",
     github_link: "https://github.com/Elora21y/active-club",
-    technologies: ["React", "TailwindCSS", "React-router", "Express.js", "MongoDB", "Firebase"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "React-router",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+    ],
   },
   {
     image: project2,
@@ -33,7 +46,14 @@ const projects = [
       "FreshAlert is a food sharing and management platform designed to reduce food waste by helping users post, find, and claim fresh and nearly expired food items.",
     live_link: "https://food-expiry-tracker-2b052.web.app/",
     github_link: "https://github.com/Elora21y/food-expiry-client",
-    technologies: ["React", "TailwindCSS", "Vite", "Express.js", "MongoDB", "Firebase"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "Vite",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+    ],
   },
   {
     image: project3,
@@ -51,14 +71,20 @@ const projects = [
       "The goal of GreenHub is to connect gardening enthusiasts, promote sustainable green practices, and create a space where people can learn from each other and grow their own mini green world — whether on a rooftop, balcony, or backyard.",
     live_link: "https://green-hub-21ye.netlify.app/",
     github_link: "https://github.com/Elora21y/green-hub",
-    technologies: ["React", "TailwindCSS", "Vite", "Express.js", "MongoDB", "Firebase"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "Vite",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+    ],
   },
 ];
 
-
 const Portfolio = ({ showAll = true }) => {
   const [viewMode, setViewMode] = useState("grid"); // 'grid' or 'list'
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
@@ -67,12 +93,14 @@ const Portfolio = ({ showAll = true }) => {
         {/* Header with Toggle */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            {showAll ? 'All' : 'Featured'}{' '}
-            <span className={`bg-clip-text text-transparent bg-gradient-to-r from-[${HeroPrimaryColor}] to-[${HeroAccentColor}]`}>
+            {showAll ? "All" : "Featured"}{" "}
+            <span
+              className={`bg-clip-text text-transparent bg-gradient-to-r from-[${HeroPrimaryColor}] to-[${HeroAccentColor}]`}
+            >
               Projects
             </span>
           </h2>
-          
+
           {/* View Toggle Buttons */}
           <div className="flex justify-center gap-3 my-8">
             <motion.button
@@ -88,7 +116,7 @@ const Portfolio = ({ showAll = true }) => {
               <FaTh size={16} />
               Grid View
             </motion.button>
-            
+
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
@@ -159,10 +187,12 @@ const Portfolio = ({ showAll = true }) => {
 
                   {/* Content */}
                   <div className="p-5 space-y-3">
-                    <h3 className={`text-xl font-semibold text-white group-hover:text-[${HeroPrimaryColor}] transition-colors`}>
+                    <h3
+                      className={`text-xl font-semibold text-white group-hover:text-[${HeroPrimaryColor}] transition-colors`}
+                    >
                       {project.name}
                     </h3>
-                    
+
                     <p className="text-gray-400 text-sm line-clamp-3">
                       {project.description}
                     </p>
@@ -219,8 +249,12 @@ const Portfolio = ({ showAll = true }) => {
                   <div className="flex-1 space-y-5">
                     {/* Title with icon */}
                     <div className="flex items-center gap-3">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center bg-[${HeroPrimaryColor}]/20 border border-[${HeroPrimaryColor}]/50`}>
-                        <HiOutlineCode className={`text-[${HeroPrimaryColor}] text-2xl`} />
+                      <div
+                        className={`w-12 h-12 rounded-full flex items-center justify-center bg-[${HeroPrimaryColor}]/20 border border-[${HeroPrimaryColor}]/50`}
+                      >
+                        <HiOutlineCode
+                          className={`text-[${HeroPrimaryColor}] text-2xl`}
+                        />
                       </div>
                       <h3 className="text-3xl md:text-4xl font-bold text-white">
                         {project.name}

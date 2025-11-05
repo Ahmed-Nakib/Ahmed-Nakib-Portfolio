@@ -8,7 +8,7 @@ const HeroPrimaryColor = "#854FEE"; // Purple
 const HeroAccentColor = "#FF4D6D"; // Pink/Red
 const HeroMidColor = "#4A90E2"; // Blue
 const DarkBackground = "#0B0E14";
-const DarkCardBackground = "#1C1F26";
+const DarkCardBackground = "#1C1F26"; // Used for contrast elements
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -31,7 +31,7 @@ const Footer = () => {
           controls.start("visible");
         }
       },
-      // Note: Use a lower threshold for footers since they are at the bottom
+      // Lower threshold for footers
       { threshold: 0.1 } 
     );
 
@@ -58,6 +58,7 @@ const Footer = () => {
   return (
     <motion.footer
       ref={sectionRef}
+      // Apply the consistent dark background
       className={`bg-[${DarkBackground}] text-gray-400 py-16 border-t border-gray-800`}
       initial="hidden"
       animate={controls}
@@ -65,12 +66,13 @@ const Footer = () => {
     >
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-12">
         
-        {/* 1️⃣ Logo/Brand Section */}
+        {/* 1️⃣ Logo/Brand Section (Used NAKIB. instead of NakibVpn for portfolio consistency) */}
         <motion.div 
             variants={sectionVariant}
             className="md:col-span-2 lg:col-span-1"
         >
             <Link to="/" className="text-3xl font-extrabold mb-4 inline-block">
+                {/* Gradient Logo Text matching the Header/Hero */}
                 <span className={`bg-clip-text text-transparent bg-gradient-to-r from-[${HeroPrimaryColor}] to-[${HeroAccentColor}]`}>
                     NAKIB.
                 </span>
@@ -81,7 +83,7 @@ const Footer = () => {
           </p>
         </motion.div>
 
-        {/* 2️⃣ Quick Links */}
+        {/* 2️⃣ Quick Links (Updated to use Link and matching hover styles) */}
         <motion.div variants={sectionVariant}>
           <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-400">
@@ -101,7 +103,7 @@ const Footer = () => {
           </ul>
         </motion.div>
 
-        {/* 3️⃣ Technologies (New Section) */}
+        {/* 3️⃣ Core Tech (Added this section for portfolio context) */}
         <motion.div variants={sectionVariant}>
             <h3 className="text-xl font-bold text-white mb-4">Core Tech</h3>
             <ul className="space-y-2 text-gray-400">
@@ -114,7 +116,7 @@ const Footer = () => {
         </motion.div>
 
 
-        {/* 4️⃣ Social & Copyright */}
+        {/* 4️⃣ Social & Copyright (Updated social icons with tri-color gradient) */}
         <motion.div variants={sectionVariant}>
           <h3 className="text-xl font-bold text-white mb-4">Connect</h3>
           
@@ -123,14 +125,13 @@ const Footer = () => {
             className="flex gap-4 mb-8"
             variants={socialContainer}
             initial="hidden"
-            // Start social animation only if the section is visible
             animate={visible ? "visible" : "hidden"} 
           >
             {[
               { Icon: FaLinkedinIn, href: "#" }, 
               { Icon: FaGithub, href: "#" },
-              // Removed generic FB/Twitter if they don't apply to a professional portfolio
-              { Icon: FaFacebookF, href: "#" }, 
+              { Icon: FaTwitter, href: "#" }, 
+              { Icon: FaFacebookF, href: "#" },
               
             ].map((item, i) => (
               <motion.a
@@ -141,7 +142,7 @@ const Footer = () => {
                 variants={socialVariant}
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
-                // Use a dynamic gradient for the background
+                // Use dynamic tri-color gradient for background and subtle purple glow on hover
                 className={`p-3 rounded-full text-white transition-all duration-300 bg-gradient-to-tr from-[${HeroPrimaryColor}] via-[${HeroMidColor}] to-[${HeroAccentColor}] shadow-lg hover:shadow-xl hover:shadow-[${HeroPrimaryColor}]/50`}
               >
                 <item.Icon size={16} />
@@ -157,7 +158,7 @@ const Footer = () => {
         </motion.div>
 
       </div>
-       {/* Bottom Line Separator */}
+       {/* Bottom Line Separator and Credit */}
        <div className="max-w-6xl mx-auto mt-12 border-t border-gray-800 pt-6 text-center">
             <p className={`text-sm text-gray-500`}>
                 Designed with <span className={`text-[${HeroAccentColor}]`}>❤️</span> by Ahmed Nakib
