@@ -210,5 +210,29 @@ export const CommentData: CommentType [] = [
         image: "public/img/testimonials/t2.jpg",
         name: "Abdulah",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
-    }
+    },
+    {
+        id:3,
+        image: "public/img/testimonials/t1.jpg",
+        name: "Mahmud",
+        details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
+    },
+    {
+        id:4,
+        image: "public/img/testimonials/t2.jpg",
+        name: "Abdulah",
+        details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
+    },
+    {
+        id:5,
+        image: "public/img/testimonials/t1.jpg",
+        name: "Mahmud",
+        details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
+    },
+    {
+        id:6,
+        image: "public/img/testimonials/t2.jpg",
+        name: "Abdulah",
+        details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
+    },
 ]
