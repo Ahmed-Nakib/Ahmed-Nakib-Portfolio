@@ -1,15 +1,14 @@
 import { ReactTyped } from "react-typed";
 import { motion as Motion, useAnimation } from "framer-motion";
-import { useCallback, useEffect, useRef, } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import Particles from "react-tsparticles";
-import type { Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 
 const Hero = () => {
   const controls = useAnimation();
   const sectionRef = useRef<HTMLElement | null>(null);
 
-  const particlesInit = useCallback(async (engine: Engine) => {
+  const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine);
   }, []);
 
@@ -46,7 +45,6 @@ const Hero = () => {
         init={particlesInit}
         className="absolute inset-0 -z-10"
         options={{
-          background: { color: "#0B0E14" },
           fpsLimit: 60,
           particles: {
             number: { value: 40 },
@@ -64,8 +62,6 @@ const Hero = () => {
 
       {/* Content */}
       <div className="max-w-screen-xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-
-        {/* Left */}
         <Motion.div variants={textVariant} initial="hidden" animate={controls}>
           <h1 className="text-5xl font-bold leading-tight">
             HI, I AM <span className="text-[#854FEE]">AHMED NAKIB</span>
@@ -102,7 +98,6 @@ const Hero = () => {
           </div>
         </Motion.div>
 
-        {/* Right */}
         <Motion.div
           variants={imageVariant}
           initial="hidden"
