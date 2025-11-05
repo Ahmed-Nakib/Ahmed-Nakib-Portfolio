@@ -1,5 +1,6 @@
 import { ReactTyped } from "react-typed";
-import { motion as Motion, useAnimation } from "framer-motion";
+// Import Variants type along with motion
+import { motion as Motion, useAnimation, Variants } from "framer-motion"; 
 import { useEffect, useRef, useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -19,7 +20,8 @@ const Hero = () => {
     return () => observer.disconnect();
   }, [controls]);
 
-  const fadeVariant = {
+  // Apply the imported Variants type here to fix the TS error
+  const fadeVariant: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
