@@ -2,7 +2,13 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
-import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaLinkedin,
+  FaGithub,
+  FaPaperPlane,
+} from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef(null);
@@ -56,10 +62,10 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
@@ -77,10 +83,10 @@ const Contact = () => {
         <div className="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -80 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             className="flex flex-col space-y-6 p-6 sm:p-8 rounded-xl bg-[#1C1F26] border border-gray-800 shadow-2xl shadow-gray-900/50"
           >
             <div>
@@ -88,7 +94,8 @@ const Contact = () => {
                 Get in Touch
               </h3>
               <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-                I'm available for freelance work and full-time opportunities. Send a message, or use the contact information below.
+                I'm available for freelance work and full-time opportunities.
+                Send a message, or use the contact information below.
               </p>
             </div>
 
@@ -99,9 +106,14 @@ const Contact = () => {
                 className="flex items-center gap-3 sm:gap-4 text-gray-300 hover:text-[#4A90E2] transition duration-300 group"
               >
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 group-hover:bg-[#854FEE] group-hover:border-transparent transition-colors">
-                  <FaEnvelope size={16} className="text-gray-400 group-hover:text-white" />
+                  <FaEnvelope
+                    size={16}
+                    className="text-gray-400 group-hover:text-white"
+                  />
                 </div>
-                <span className="text-sm sm:text-lg break-all">office.nakib@gmail.com</span>
+                <span className="text-sm sm:text-lg break-all">
+                  office.nakib@gmail.com
+                </span>
               </a>
 
               <a
@@ -109,7 +121,10 @@ const Contact = () => {
                 className="flex items-center gap-3 sm:gap-4 text-gray-300 hover:text-[#4A90E2] transition duration-300 group"
               >
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 group-hover:bg-[#854FEE] group-hover:border-transparent transition-colors">
-                  <FaPhoneAlt size={16} className="text-gray-400 group-hover:text-white" />
+                  <FaPhoneAlt
+                    size={16}
+                    className="text-gray-400 group-hover:text-white"
+                  />
                 </div>
                 <span className="text-sm sm:text-lg">+8801856682104</span>
               </a>
@@ -120,7 +135,7 @@ const Contact = () => {
               {[
                 {
                   Icon: FaLinkedin,
-                  href: "https://www.linkedin.com/in/nakibul-islam-b8684b37b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                  href: "https://www.linkedin.com/in/nakibul-islam-b8684b37b",
                 },
                 {
                   Icon: FaGithub,
@@ -146,10 +161,10 @@ const Contact = () => {
           <motion.form
             ref={form}
             onSubmit={sendEmail}
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -80 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="grid gap-4 sm:gap-6 p-6 sm:p-8 rounded-xl bg-[#1C1F26] border border-gray-800 shadow-2xl shadow-gray-900/50"
           >
             <input
@@ -180,7 +195,13 @@ const Contact = () => {
               disabled={loading}
               className="py-3 sm:py-4 font-bold rounded-xl text-white bg-gradient-to-r from-[#854FEE] to-[#FF4D6D] shadow-xl shadow-[#854FEE]/40 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 text-sm sm:text-base"
             >
-              {loading ? "Sending..." : <>Send Message <FaPaperPlane size={16} /></>}
+              {loading ? (
+                "Sending..."
+              ) : (
+                <>
+                  Send Message <FaPaperPlane size={16} />
+                </>
+              )}
             </motion.button>
           </motion.form>
         </div>

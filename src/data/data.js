@@ -168,37 +168,37 @@ export const ServiceData = [
 export const CommentData = [
     {
         id:1,
-        image: "/testimonials/t1.jpg",
+        image: "t1.jpg",
         name: "Mahmud",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:2,
-        image: "/testimonials/t2.jpg",
+        image: "t2.jpg",
         name: "Abdulah",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:3,
-        image: "/testimonials/t1.jpg",
+        image: "t1.jpg",
         name: "Mahmud",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:4,
-        image: "/testimonials/t2.jpg",
+        image: "t2.jpg",
         name: "Abdulah",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:5,
-        image: "/testimonials/t1.jpg",
+        image: "t1.jpg",
         name: "Mahmud",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:6,
-        image: "/testimonials/t2.jpg",
+        image: "t2.jpg",
         name: "Abdulah",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
