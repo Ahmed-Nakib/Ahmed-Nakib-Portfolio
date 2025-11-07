@@ -139,25 +139,25 @@ export const ExperienceSectionData= [
 export const ServiceData = [
     {
         id:1,
-        image:"/services/s1.png",
+        image:"/s1.png",
         name: "Wp developing",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:2,
-        image:"/services/s2.png",
+        image:"/s2.png",
         name: "UI/ux design",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:3,
-        image:"/services/s3.png",
+        image:"/s3.png",
         name: "Web design",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:4,
-        image:"/services/s4.png",
+        image:"/s4.png",
         name: "seo optimize",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
