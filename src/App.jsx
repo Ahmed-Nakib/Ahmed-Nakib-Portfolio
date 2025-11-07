@@ -6,6 +6,9 @@ import Skills from './components/Skills'
 import Service from './components/Service'
 import UserComment from './components/UserComment'
 import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import About from './components/About'
 
 const App = () => {
   return (
@@ -13,10 +16,13 @@ const App = () => {
       <Toaster />
       <Header />
       <Hero />
+      <About />
       <Skills />
       <Service />
       <UserComment />
       <Portfolio />
+      <Contact />
+      <Footer />
     </div>
   )
 }
