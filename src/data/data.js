@@ -139,25 +139,25 @@ export const ExperienceSectionData= [
 export const ServiceData = [
     {
         id:1,
-        image:"public/img/services/s1.png",
+        image:"/services/s1.png",
         name: "Wp developing",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:2,
-        image:"public/img/services/s2.png",
+        image:"/services/s2.png",
         name: "UI/ux design",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:3,
-        image:"public/img/services/s3.png",
+        image:"/services/s3.png",
         name: "Web design",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:4,
-        image:"public/img/services/s4.png",
+        image:"/services/s4.png",
         name: "seo optimize",
         details:"Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
@@ -168,37 +168,37 @@ export const ServiceData = [
 export const CommentData = [
     {
         id:1,
-        image: "public/img/testimonials/t1.jpg",
+        image: "/testimonials/t1.jpg",
         name: "Mahmud",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:2,
-        image: "public/img/testimonials/t2.jpg",
+        image: "/testimonials/t2.jpg",
         name: "Abdulah",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:3,
-        image: "public/img/testimonials/t1.jpg",
+        image: "/testimonials/t1.jpg",
         name: "Mahmud",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:4,
-        image: "public/img/testimonials/t2.jpg",
+        image: "/testimonials/t2.jpg",
         name: "Abdulah",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:5,
-        image: "public/img/testimonials/t1.jpg",
+        image: "/testimonials/t1.jpg",
         name: "Mahmud",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
     {
         id:6,
-        image: "public/img/testimonials/t2.jpg",
+        image: "/testimonials/t2.jpg",
         name: "Abdulah",
         details: "Creeping for female light years that lesser can't evening heaven isn't bearing tree"
     },
