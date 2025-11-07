@@ -93,7 +93,7 @@ const Hero = () => {
 
             <Motion.a
               whileHover={{ scale: 1.08 }}
-              href="/img/cv.pdf"
+              href="https://drive.google.com/file/d/1RhhZ6vcIOS2QdHwdVdJLvL5iqOgcDYwc/view?usp=sharing"
               download="Ahmed-Nakib-CV.pdf"
               className="px-6 py-3 border border-[var(--hero-primary)] rounded-lg text-white hover:bg-gradient-to-r hover:from-[var(--hero-primary)] hover:via-[var(--hero-mid)] hover:to-[var(--hero-accent)] transition duration-300"
             >

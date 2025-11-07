@@ -27,13 +27,13 @@ const projects = [
     technologies: ["React", "TailwindCSS", "React-router", "Express.js", "MongoDB", "Firebase"],
   },
   {
-    image: "/food-mockup.png",
-    name: "Fresh Alert",
+    image: "/nakibVpn.png",
+    name: "NakibVpn",
     description:
-      "FreshAlert is a food sharing and management platform designed to reduce food waste by helping users post, find, and claim fresh and nearly expired food items.",
-    live_link: "https://agency-website-with-react-js.vercel.app/",
-    github_link: "https://agency-website-with-react-js.vercel.app/",
-    technologies: ["React", "TailwindCSS", "Vite", "Express.js", "MongoDB", "Firebase"],
+      "NakibVpn is a VPN service that provides secure and private internet access to users, helping them bypass geo-restrictions and protect their online privacy.",
+    live_link: "https://nakib-vpn-react.vercel.app/",
+    github_link: "https://github.com/Ahmed-Nakib/Nakib-vpn-react",
+    technologies: ["React", "TailwindCSS", "FramerMotion", "Vite"],
   },
   {
     image: "/green_hub-mockup.png",
@@ -45,13 +45,13 @@ const projects = [
     technologies: ["React", "TailwindCSS", "Firebase", "Vite"],
   },
   {
-    image: "/food-mockup.png",
-    name: "Green Hub",
+    image: "/eShop.png",
+    name: "E-Shop",
     description:
-      "The goal of GreenHub is to connect gardening enthusiasts, promote sustainable green practices, and create a space where people can learn from each other and grow their own mini green world — whether on a rooftop, balcony, or backyard.",
-    live_link: "https://agency-website-with-react-js.vercel.app/",
-    github_link: "https://agency-website-with-react-js.vercel.app/",
-    technologies: ["React", "TailwindCSS", "Vite", "Express.js", "MongoDB", "Firebase"],
+      "The goal of E-Shop is to connect gardening enthusiasts, promote sustainable green practices, and create a space where people can learn from each other and grow their own mini green world — whether on a rooftop, balcony, or backyard.",
+    live_link: "https://e-shop-wrjk.vercel.app/",
+    github_link: "https://github.com/Ahmed-Nakib/e-shop",
+    technologies: ["React", "TailwindCSS", "Redux", "Vite", "Express.js", "MongoDB", "Firebase"],
   },
 ];
 
