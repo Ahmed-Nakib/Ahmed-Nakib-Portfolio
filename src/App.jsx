@@ -1,42 +1,48 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
+
+// Components
+import LoadingScreen from "./components/LoadingScreen";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
+import About from "./components/About";
 import Skills from "./components/Skills";
 import Service from "./components/Service";
-import UserComment from "./components/UserComment";
 import Portfolio from "./components/Portfolio";
+import UserComment from "./components/UserComment";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import About from "./components/About";
-import LoadingScreen from "./components/LoadingScreen";
 
 const App = () => {
   const [showMain, setShowMain] = useState(false);
 
   return (
-    <>
-      {/* Loading screen */}
+    <div className="bg-[#0B0E14] dark:bg-black text-white transition-colors duration-500">
+      {/* Loading Screen */}
       {!showMain && (
         <LoadingScreen onAnimationComplete={() => setShowMain(true)} />
       )}
 
-      {/* Main site */}
+      {/* Main Content */}
       {showMain && (
-        <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-all duration-700">
-          <Toaster />
+        <>
+          <Toaster position="top-right" reverseOrder={false} />
           <Header />
-          <Hero />
-          <About />
-          <Skills />
-          <Service />
-          <UserComment />
-          <Portfolio />
-          <Contact />
+
+          <main>
+            <Hero />
+            <About />
+            <Skills />
+            <Service />
+            <Portfolio />
+            <UserComment />
+            <Contact />
+          </main>
+
           <Footer />
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 };
 

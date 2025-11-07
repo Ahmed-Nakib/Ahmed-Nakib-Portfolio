@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative w-full min-h-screen flex items-center overflow-hidden"
+      className="relative w-full min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8"
       style={{ backgroundColor: "var(--dark-bg)" }}
     >
       {/* Particles Background */}
@@ -59,21 +59,21 @@ const Hero = () => {
       />
 
       {/* Floating Blobs */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-[var(--hero-primary)] via-[var(--hero-mid)] to-[var(--hero-accent)] rounded-full blur-[140px] opacity-30 -z-10 animate-float-slow"></div>
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-r from-[var(--hero-accent)] via-[var(--hero-primary)] to-[var(--hero-mid)] rounded-full blur-[140px] opacity-20 -z-10 animate-float"></div>
+      <div className="absolute top-20 left-4 sm:left-20 w-56 sm:w-72 h-56 sm:h-72 bg-gradient-to-r from-[var(--hero-primary)] via-[var(--hero-mid)] to-[var(--hero-accent)] rounded-full blur-[140px] opacity-30 -z-10 animate-float-slow"></div>
+      <div className="absolute bottom-20 right-4 sm:right-20 w-56 sm:w-72 h-56 sm:h-72 bg-gradient-to-r from-[var(--hero-accent)] via-[var(--hero-primary)] to-[var(--hero-mid)] rounded-full blur-[140px] opacity-20 -z-10 animate-float"></div>
 
       {/* Hero Content */}
-      <div className="max-w-screen-xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-8 md:gap-10 items-center w-full">
         {/* Text */}
         <Motion.div variants={fadeVariant} initial="hidden" animate={controls}>
-          <h1 className="text-5xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             HI, I AM{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[var(--hero-primary)] via-[var(--hero-mid)] to-[var(--hero-accent)]">
               AHMED NAKIB
             </span>
           </h1>
 
-          <p className="mt-3 text-xl uppercase text-gray-300 font-semibold">
+          <p className="mt-3 text-lg sm:text-xl md:text-2xl uppercase text-gray-300 font-semibold">
             <ReactTyped
               strings={["Full Stack Developer", "Frontend Engineer", "Backend Specialist"]}
               typeSpeed={60}
@@ -82,11 +82,11 @@ const Hero = () => {
             />
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-4">
+          <div className="mt-6 flex flex-wrap gap-3 sm:gap-4">
             <Motion.a
               whileHover={{ scale: 1.08 }}
               href="#contact"
-              className="px-6 py-3 bg-gradient-to-r from-[var(--hero-primary)] via-[var(--hero-mid)] to-[var(--hero-accent)] rounded-lg font-semibold text-white hover:brightness-125 transition duration-300 shadow-lg"
+              className="px-5 py-3 sm:px-6 sm:py-4 bg-gradient-to-r from-[var(--hero-primary)] via-[var(--hero-mid)] to-[var(--hero-accent)] rounded-lg font-semibold text-white hover:brightness-125 transition duration-300 shadow-lg text-sm sm:text-base"
             >
               Hire Me
             </Motion.a>
@@ -95,7 +95,7 @@ const Hero = () => {
               whileHover={{ scale: 1.08 }}
               href="https://drive.google.com/file/d/1RhhZ6vcIOS2QdHwdVdJLvL5iqOgcDYwc/view?usp=sharing"
               download="Ahmed-Nakib-CV.pdf"
-              className="px-6 py-3 border border-[var(--hero-primary)] rounded-lg text-white hover:bg-gradient-to-r hover:from-[var(--hero-primary)] hover:via-[var(--hero-mid)] hover:to-[var(--hero-accent)] transition duration-300"
+              className="px-5 py-3 sm:px-6 sm:py-4 border border-[var(--hero-primary)] rounded-lg text-white hover:bg-gradient-to-r hover:from-[var(--hero-primary)] hover:via-[var(--hero-mid)] hover:to-[var(--hero-accent)] transition duration-300 text-sm sm:text-base"
             >
               Get CV
             </Motion.a>
@@ -108,12 +108,12 @@ const Hero = () => {
           initial="hidden"
           animate={controls}
           whileHover={{ scale: 1.05 }}
-          className="flex justify-center"
+          className="flex justify-center mt-8 md:mt-0"
         >
           <img
             src="/img/banner/home-right.png"
             alt="Hero"
-            className="w-full max-w-lg drop-shadow-[0_0_25px_rgba(133,79,238,0.6)] animate-float-slow"
+            className="w-full max-w-md sm:max-w-lg md:max-w-xl drop-shadow-[0_0_25px_rgba(133,79,238,0.6)] animate-float-slow"
           />
         </Motion.div>
       </div>

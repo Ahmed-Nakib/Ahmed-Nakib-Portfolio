@@ -2,18 +2,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
-import {
-  FaEnvelope,
-  FaPhoneAlt,
-  FaLinkedin,
-  FaGithub,
-  FaPaperPlane,
-} from "react-icons/fa";
-
-// Color Constants
-const HeroPrimaryColor = "#854FEE";
-const HeroAccentColor = "#FF4D6D";
-const HeroMidColor = "#4A90E2";
+import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef(null);
@@ -63,83 +52,71 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[#0B0E14] text-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section id="contact" className="py-16 md:py-24 bg-[#0B0E14] text-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="text-center"
         >
-          <h2 className="text-4xl sm:text-5xl font-extrabold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
             Connect With{" "}
-            <span
-              className="text-transparent bg-clip-text bg-gradient-to-r"
-              style={{
-                backgroundImage: `linear-gradient(to right, ${HeroPrimaryColor}, ${HeroAccentColor})`,
-              }}
-            >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#854FEE] to-[#FF4D6D]">
               Me
             </span>
           </h2>
-          <p className="mt-3 text-gray-400 text-lg">
+          <p className="mt-2 sm:mt-3 text-gray-400 text-base sm:text-lg">
             Let's discuss your next project. I'm ready to work! 🚀
           </p>
         </motion.div>
 
-        <div className="mt-16 grid lg:grid-cols-2 gap-12 lg:gap-20 text-left">
+        {/* Contact Cards & Form */}
+        <div className="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col space-y-8 p-8 rounded-xl bg-[#1C1F26] border border-gray-800 shadow-2xl shadow-gray-900/50"
+            className="flex flex-col space-y-6 p-6 sm:p-8 rounded-xl bg-[#1C1F26] border border-gray-800 shadow-2xl shadow-gray-900/50"
           >
-            <div className="text-left">
-              <h3
-                className="text-2xl font-bold mb-3"
-                style={{ color: HeroPrimaryColor }}
-              >
+            <div>
+              <h3 className="text-2xl font-bold mb-2 sm:mb-3 text-[#854FEE]">
                 Get in Touch
               </h3>
-              <p className="text-gray-400 leading-relaxed">
-                I'm available for freelance work and full-time opportunities.
-                Send a message, or use the contact information below.
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+                I'm available for freelance work and full-time opportunities. Send a message, or use the contact information below.
               </p>
             </div>
 
             {/* Contact Details */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <a
                 href="mailto:office.nakib@gmail.com"
-                className="flex items-center gap-4 text-gray-300 hover:text-[#4A90E2] transition duration-300 group"
+                className="flex items-center gap-3 sm:gap-4 text-gray-300 hover:text-[#4A90E2] transition duration-300 group"
               >
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 group-hover:bg-[#854FEE] group-hover:border-transparent transition-colors">
-                  <FaEnvelope
-                    size={16}
-                    className="text-gray-400 group-hover:text-white"
-                  />
+                  <FaEnvelope size={16} className="text-gray-400 group-hover:text-white" />
                 </div>
-                <span className="text-lg">office.nakib@gmail.com</span>
+                <span className="text-sm sm:text-lg break-all">office.nakib@gmail.com</span>
               </a>
 
               <a
                 href="tel:+8801856682104"
-                className="flex items-center gap-4 text-gray-300 hover:text-[#4A90E2] transition duration-300 group"
+                className="flex items-center gap-3 sm:gap-4 text-gray-300 hover:text-[#4A90E2] transition duration-300 group"
               >
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 group-hover:bg-[#854FEE] group-hover:border-transparent transition-colors">
-                  <FaPhoneAlt
-                    size={16}
-                    className="text-gray-400 group-hover:text-white"
-                  />
+                  <FaPhoneAlt size={16} className="text-gray-400 group-hover:text-white" />
                 </div>
-                <span className="text-lg">+8801856682104</span>
+                <span className="text-sm sm:text-lg">+8801856682104</span>
               </a>
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
               {[
                 {
                   Icon: FaLinkedin,
@@ -152,7 +129,7 @@ const Contact = () => {
               ].map(({ Icon, href }, i) => (
                 <motion.a
                   key={i}
-                  whileHover={{ scale: 1.15 }}
+                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="text-xl p-3 rounded-full bg-gray-800 border border-gray-700 text-gray-400 transition-all duration-300 hover:bg-[#854FEE] hover:text-white hover:border-transparent shadow-lg"
                   href={href}
@@ -173,27 +150,27 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid gap-6 p-8 rounded-xl bg-[#1C1F26] border border-gray-800 shadow-2xl shadow-gray-900/50"
+            className="grid gap-4 sm:gap-6 p-6 sm:p-8 rounded-xl bg-[#1C1F26] border border-gray-800 shadow-2xl shadow-gray-900/50"
           >
             <input
               type="text"
               name="name"
               placeholder="Your Name"
-              className="p-4 bg-gray-900 rounded-xl border border-gray-700 focus:ring-2 focus:ring-[#4A90E2] outline-none text-white transition duration-300"
+              className="p-3 sm:p-4 bg-gray-900 rounded-xl border border-gray-700 focus:ring-2 focus:ring-[#4A90E2] outline-none text-white text-sm sm:text-base transition duration-300"
             />
 
             <input
               type="email"
               name="email"
               placeholder="Your Email"
-              className="p-4 bg-gray-900 rounded-xl border border-gray-700 focus:ring-2 focus:ring-[#4A90E2] outline-none text-white transition duration-300"
+              className="p-3 sm:p-4 bg-gray-900 rounded-xl border border-gray-700 focus:ring-2 focus:ring-[#4A90E2] outline-none text-white text-sm sm:text-base transition duration-300"
             />
 
             <textarea
               name="message"
-              rows={6}
+              rows={5}
               placeholder="Message"
-              className="p-4 bg-gray-900 rounded-xl border border-gray-700 focus:ring-2 focus:ring-[#4A90E2] outline-none text-white transition duration-300"
+              className="p-3 sm:p-4 bg-gray-900 rounded-xl border border-gray-700 focus:ring-2 focus:ring-[#4A90E2] outline-none text-white text-sm sm:text-base transition duration-300 resize-none"
             />
 
             <motion.button
@@ -201,15 +178,9 @@ const Contact = () => {
               whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={loading}
-              className="py-4 font-bold rounded-xl text-white bg-gradient-to-r from-[#854FEE] to-[#FF4D6D] shadow-xl shadow-[#854FEE]/40 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2"
+              className="py-3 sm:py-4 font-bold rounded-xl text-white bg-gradient-to-r from-[#854FEE] to-[#FF4D6D] shadow-xl shadow-[#854FEE]/40 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 text-sm sm:text-base"
             >
-              {loading ? (
-                "Sending..."
-              ) : (
-                <>
-                  Send Message <FaPaperPlane size={16} />
-                </>
-              )}
+              {loading ? "Sending..." : <>Send Message <FaPaperPlane size={16} /></>}
             </motion.button>
           </motion.form>
         </div>
