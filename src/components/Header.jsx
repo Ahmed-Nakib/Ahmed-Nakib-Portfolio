@@ -3,9 +3,9 @@ import { motion as Motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { id: 1, name: "Home", path: "/" },
-  { id: 2, name: "About", path: "#about" },
-  { id: 3, name: "Projects", path: "#projects" },
-  { id: 4, name: "Contact", path: "#contact" },
+  { id: 2, name: "About", path: "about" },
+  { id: 3, name: "Portfolio", path: "portfolio" },
+  { id: 4, name: "Contact", path: "contact" },
 ];
 
 const Header = () => {
@@ -28,10 +28,15 @@ const Header = () => {
 
   return (
     <Motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 120, duration: 0.5 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      initial={{ y: -80, opacity: 0 }}
+       animate={{ y: 0, opacity: 1 }}
+      transition={{
+        type: "tween",
+        ease: "easeOut",
+        duration: 0.5,
+        delay: 0.1,
+      }}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled ? "bg-[#0B0E14] shadow-xl" : "bg-[#0B0E14] md:bg-transparent"
       }`}
     >
@@ -86,7 +91,11 @@ const Header = () => {
                   stroke="currentColor"
                   strokeWidth="2"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
                 <svg
@@ -97,7 +106,11 @@ const Header = () => {
                   stroke="currentColor"
                   strokeWidth="2"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               )}
             </button>
