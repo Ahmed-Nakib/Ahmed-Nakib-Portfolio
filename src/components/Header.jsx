@@ -5,7 +5,7 @@ const navItems = [
   { id: 1, name: "Home", path: "/" },
   { id: 2, name: "About", path: "about" },
   { id: 3, name: "Portfolio", path: "portfolio" },
-  { id: 4, name: "Contact", path: "contact" },
+  { id: 4, name: "Learn With Nakib", path: "learnWithNakib" },
 ];
 
 const Header = () => {
@@ -70,7 +70,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <Motion.a
               whileHover={{ scale: 1.08 }}
-              href="#contact"
+              href="contact"
               className="hidden md:block px-6 py-3 bg-gradient-to-r from-[#854FEE] via-[#4A90E2] to-[#FF4D6D] rounded-lg font-semibold text-white shadow-lg hover:brightness-125 transition duration-300"
             >
               Contact Me
