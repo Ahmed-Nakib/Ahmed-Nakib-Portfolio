@@ -83,13 +83,13 @@ const Hero = () => {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3 sm:gap-4">
-            <Motion.a
+            {/* <Motion.a
               whileHover={{ scale: 1.08 }}
               href="/contact"
               className="px-5 py-3 sm:px-6 sm:py-4 bg-gradient-to-r from-[var(--hero-primary)] via-[var(--hero-mid)] to-[var(--hero-accent)] rounded-lg font-semibold text-white hover:brightness-125 transition duration-300 shadow-lg text-sm sm:text-base"
             >
               Hire Me
-            </Motion.a>
+            </Motion.a> */}
 
             <Motion.a
               whileHover={{ scale: 1.08 }}

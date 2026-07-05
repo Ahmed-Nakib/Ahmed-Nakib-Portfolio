@@ -57,15 +57,15 @@ const projects = [
       "Vercel",
     ],
   },
-  {
-    image: "/nakibVpn.png",
-    name: "NakibVpn",
-    description:
-      "NakibVpn is a VPN service that provides secure and private internet access to users, helping them bypass geo-restrictions and protect their online privacy.",
-    live_link: "https://nakib-vpn-react.vercel.app/",
-    github_link: "https://github.com/Ahmed-Nakib/Nakib-vpn-react",
-    technologies: ["React", "TailwindCSS", "FramerMotion", "Vite"],
-  },
+  // {
+  //   image: "/nakibVpn.png",
+  //   name: "NakibVpn",
+  //   description:
+  //     "NakibVpn is a VPN service that provides secure and private internet access to users, helping them bypass geo-restrictions and protect their online privacy.",
+  //   live_link: "https://nakib-vpn-react.vercel.app/",
+  //   github_link: "https://github.com/Ahmed-Nakib/Nakib-vpn-react",
+  //   technologies: ["React", "TailwindCSS", "FramerMotion", "Vite"],
+  // },
   {
     image: "/deenVerse.png",
     name: "DeenVerse",
@@ -75,23 +75,23 @@ const projects = [
     github_link: "https://github.com/Ahmed-Nakib/DeenVerse",
     technologies: ["React", "TypeScript", "TailwindCSS", "Vite"],
   },
-  {
-    image: "/eShop.png",
-    name: "E-Shop",
-    description:
-      "The goal of E-Shop is to connect gardening enthusiasts, promote sustainable green practices, and create a space where people can learn from each other and grow their own mini green world — whether on a rooftop, balcony, or backyard.",
-    live_link: "https://e-shop-wrjk.vercel.app/",
-    github_link: "https://github.com/Ahmed-Nakib/e-shop",
-    technologies: [
-      "React",
-      "TailwindCSS",
-      "Redux",
-      "Vite",
-      "Express.js",
-      "MongoDB",
-      "Firebase",
-    ],
-  },
+  // {
+  //   image: "/eShop.png",
+  //   name: "E-Shop",
+  //   description:
+  //     "The goal of E-Shop is to connect gardening enthusiasts, promote sustainable green practices, and create a space where people can learn from each other and grow their own mini green world — whether on a rooftop, balcony, or backyard.",
+  //   live_link: "https://e-shop-wrjk.vercel.app/",
+  //   github_link: "https://github.com/Ahmed-Nakib/e-shop",
+  //   technologies: [
+  //     "React",
+  //     "TailwindCSS",
+  //     "Redux",
+  //     "Vite",
+  //     "Express.js",
+  //     "MongoDB",
+  //     "Firebase",
+  //   ],
+  // },
 ];
 
 const Portfolio = ({ showAll = true }) => {
