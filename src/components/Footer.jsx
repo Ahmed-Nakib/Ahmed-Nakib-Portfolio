@@ -9,9 +9,9 @@ const DarkBackground = "#0B0E14";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "About", path: "#about" },
-  { name: "Projects", path: "#projects" },
-  { name: "Contact", path: "#contact" },
+  { name: "About", path: "/about" },
+  { name: "Portfolio", path: "/portfolio" },
+  { name: "Contact", path: "contact" },
 ];
 
 const Footer = () => {
