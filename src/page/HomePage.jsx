@@ -1,19 +1,19 @@
-import Contact from "../components/Contact";
 import Hero from "../components/Hero";
-import Service from "../components/Service";
 import Skills from "../components/Skills";
+import Service from "../components/Service";
 import UserComment from "../components/UserComment";
+import Portfolio from "../components/Portfolio";
 
 function HomePage() {
-    return ( 
-        <>
-        <Hero />
-        <Skills />
-        <Service />
-        <UserComment />
-        <Contact />
-        </>
-     );
+  return (
+    <>
+      <Hero />
+      <Skills />
+      <Service />
+      <Portfolio/>
+      <UserComment />
+    </>
+  );
 }
 
 export default HomePage;

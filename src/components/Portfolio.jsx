@@ -15,16 +15,47 @@ const HeroPrimaryColor = "#854FEE";
 const HeroAccentColor = "#FF4D6D";
 const HeroMidColor = "#4A90E2";
 
-// Mock Project Data (public folder থেকে images use করা হচ্ছে)
 const projects = [
   {
-    image: "/food-mockup.png",
-    name: "Active Club",
+    image: "/learning.png",
+    name: "SIMPLEBLOG",
     description:
-      "Active Club is a full-stack sports club management web application that allows users to view and book courts, participate in activities, and stay informed through announcements. Admins can manage courts, bookings, users, and important updates all in one place.",
-    live_link: "https://agency-website-with-react-js.vercel.app/",
-    github_link: "https://agency-website-with-react-js.vercel.app/",
-    technologies: ["React", "TailwindCSS", "React-router", "Express.js", "MongoDB", "Firebase"],
+      "This is a full-stack Learning Management Platform (LMS) built with modern web technologies. The frontend is developed using React, React Router, and Tailwind CSS to provide a fast, responsive, and user-friendly interface. The backend is built with Node.js, Express.js, and MongoDB (Mongoose) for efficient data management and API handling The platform allows administrators to create, update, and manage learning content through the backend. Users can browse educational resources, access course content, and enjoy a seamless learning experience. The project follows a clean component-based architecture, ensuring scalability, maintainability, and better performance.",
+    live_link: "https://simpleblog-coral.vercel.app/",
+    github_link:
+      "https://github.com/Ahmed-Nakib/Full-Stack-AI-Powered-Blog-App-using-MERN-Stack-Google-Gemini-and-ImageKit-API-CLIENT",
+    technologies: [
+      "React",
+      "React",
+      "Router",
+      "Tailwind.CSS ",
+      "Node.js",
+      "Express.js",
+      "MongoDB (Mongoose)",
+      "REST API",
+    ],
+  },
+  {
+    image: "/bagdash.png",
+    name: "BAGDDASH",
+    description:
+      "This is a modern full-stack e-commerce platform built with Next.js for both the frontend and backend, providing a fast, scalable, and SEO-friendly experience. The application uses MongoDB for efficient data storage and management The platform includes essential e-commerce features such as product browsing, category filtering, detailed product pages, shopping cart, secure checkout, order management, and user authentication. An integrated payment gateway enables users to complete transactions securely and convenientlyThe admin panel allows administrators to manage products, categories, orders, and users, making it easy to maintain the entire store from a single dashboard. The project is designed with a responsive interface, clean architecture, and optimized performance to deliver a smooth shopping experience across all devices.",
+    live_link: "https://bagddash.vercel.app/",
+    github_link: "https://github.com/Ahmed-Nakib/bagddash",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Mongoose",
+      "Next.js API Routes",
+      "REST API",
+      "JWT Authentication",
+      "Git",
+      "GitHub",
+      "Vercel",
+    ],
   },
   {
     image: "/nakibVpn.png",
@@ -36,13 +67,13 @@ const projects = [
     technologies: ["React", "TailwindCSS", "FramerMotion", "Vite"],
   },
   {
-    image: "/green_hub-mockup.png",
-    name: "Job Nest",
+    image: "/deenVerse.png",
+    name: "DeenVerse",
     description:
       "JobNest is an innovative and user-friendly website designed to help job seekers explore a wide variety of job opportunities across multiple companies.",
-    live_link: "https://agency-website-with-react-js.vercel.app/",
-    github_link: "https://agency-website-with-react-js.vercel.app/",
-    technologies: ["React", "TailwindCSS", "Firebase", "Vite"],
+    live_link: "https://deen-verse-ebon.vercel.app/",
+    github_link: "https://github.com/Ahmed-Nakib/DeenVerse",
+    technologies: ["React", "TypeScript", "TailwindCSS", "Vite"],
   },
   {
     image: "/eShop.png",
@@ -51,7 +82,15 @@ const projects = [
       "The goal of E-Shop is to connect gardening enthusiasts, promote sustainable green practices, and create a space where people can learn from each other and grow their own mini green world — whether on a rooftop, balcony, or backyard.",
     live_link: "https://e-shop-wrjk.vercel.app/",
     github_link: "https://github.com/Ahmed-Nakib/e-shop",
-    technologies: ["React", "TailwindCSS", "Redux", "Vite", "Express.js", "MongoDB", "Firebase"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "Redux",
+      "Vite",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+    ],
   },
 ];
 
@@ -67,7 +106,9 @@ const Portfolio = ({ showAll = true }) => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
             {showAll ? "All" : "Featured"}{" "}
-            <span className={`bg-clip-text text-transparent bg-gradient-to-r from-[${HeroPrimaryColor}] to-[${HeroAccentColor}]`}>
+            <span
+              className={`bg-clip-text text-transparent bg-gradient-to-r from-[${HeroPrimaryColor}] to-[${HeroAccentColor}]`}
+            >
               Projects
             </span>
           </h2>
@@ -156,10 +197,15 @@ const Portfolio = ({ showAll = true }) => {
                     <h3 className="text-xl font-semibold text-white group-hover:text-[#854FEE] transition-colors">
                       {project.name}
                     </h3>
-                    <p className="text-gray-400 text-sm line-clamp-3">{project.description}</p>
+                    <p className="text-gray-400 text-sm line-clamp-3">
+                      {project.description}
+                    </p>
                     <div className="flex flex-wrap gap-2 pt-2">
                       {project.technologies.map((tech, i) => (
-                        <span key={i} className="text-xs bg-gray-700/50 text-gray-300 px-3 py-1 rounded-full border border-gray-700">
+                        <span
+                          key={i}
+                          className="text-xs bg-gray-700/50 text-gray-300 px-3 py-1 rounded-full border border-gray-700"
+                        >
                           {tech}
                         </span>
                       ))}
@@ -206,10 +252,14 @@ const Portfolio = ({ showAll = true }) => {
                       <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#854FEE]/20 border border-[#854FEE]/50">
                         <HiOutlineCode className="text-[#854FEE] text-2xl" />
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-white">{project.name}</h3>
+                      <h3 className="text-3xl md:text-4xl font-bold text-white">
+                        {project.name}
+                      </h3>
                     </div>
 
-                    <p className="text-gray-400 leading-relaxed text-base">{project.description}</p>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      {project.description}
+                    </p>
 
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, i) => (
@@ -240,7 +290,10 @@ const Portfolio = ({ showAll = true }) => {
                         className="px-6 py-3 bg-gradient-to-r from-[#854FEE] to-[#FF4D6D] rounded-lg font-semibold text-white hover:brightness-125 transition duration-300 shadow-lg flex items-center gap-2"
                       >
                         View Live
-                        <motion.div animate={{ x: hoveredIndex === index ? 5 : 0 }} transition={{ duration: 0.2 }}>
+                        <motion.div
+                          animate={{ x: hoveredIndex === index ? 5 : 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
                           <FaArrowRight size={16} />
                         </motion.div>
                       </a>
